@@ -11,6 +11,8 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@heroicons/vue": "^2.1.4",
+    "npm-install-missing": "^0.1.4",
     "vue": "^3.4.29"
   },
   "devDependencies": {
