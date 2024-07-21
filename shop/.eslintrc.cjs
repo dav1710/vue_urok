@@ -10,5 +10,15 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  rules: {
+    'vue/multi-word-component-names': 'off',
+    'vue/no-multiple-template-root':  0,
+    'vue/no-multiple-template-root':  ["error", {
+      disallowComments: true // default: false
+    }]
+  },
+  workingDirectories: {
+    'mode': 'auto'
   }
 }
