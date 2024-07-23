@@ -1,20 +1,24 @@
 <script setup>
 import Cart from './Cart.vue'
-
+defineProps({
+    items: Array    
+})
 const onClickAdd = () => {
-    alert('add')
+  alert('add')
 }
 </script>
 
 <template>
-    <div class="grid grid-cols-4 gap-5">
-        <Cart 
-            title="Men Sneakers Nike Blazer Mid Suede" 
-            :price="1000" 
-            imageUrl="/sneakers/sneakers-1.jpg" 
-            :isAdded="true"
-            :isFavorite="true"
-            :onClickAdd="onClickAdd"
-            />
-      </div>
+  <div class="grid grid-cols-4 gap-5">
+    <Cart
+    v-for="item in items"
+      :key="item.id" 
+      :title=item.title
+      :price=item.price
+      :imageUrl=item.imageUrl
+      :isAdded="true"
+      :isFavorite="true"
+      :onClickAdd="onClickAdd"
+    />
+  </div>
 </template>
